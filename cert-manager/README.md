@@ -5,5 +5,17 @@
 
 #### Install
 ```bash
-helm install stable/cert-manager --name cert-manager --namespace kube-system
+$ helm install stable/cert-manager --name cert-manager --namespace kube-system
+```
+
+#### Certificate Authority Account Secret
+Create secrets for `letsencrypt-prod`.
+```bash
+$ kubectl create secret generic letsencrypt-prod --namespace=default
+```
+
+#### ClusterIssuer
+Deploy the ClusterIssuer
+```bash
+$ kubectl apply -f letsencrypt-prod.yml
 ```
