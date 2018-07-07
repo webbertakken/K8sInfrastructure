@@ -35,9 +35,12 @@ $ kubectl create secret generic letsencrypt-prod --namespace=default
 
 #### ClusterIssuer
 Deploy the ClusterIssuer
+
+___Note:__ change the email address in `letsencrypt-prod.yml`._ 
 ```bash
 $ kubectl apply -f letsencrypt-prod.yml
 ```
+___Note 2:__ i'm still looking for a way to make this yaml-file generic, without putting email address in a secret, since it masks the value._
 
 ## Delete
 ```bash
