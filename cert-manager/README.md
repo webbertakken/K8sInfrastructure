@@ -24,9 +24,11 @@ documentation:
 
 https://cert-manager.readthedocs.io/en/latest/reference/ingress-shim.html
 
-## Example
+## Example usage
 #### Certificate Authority Account Secret
 Create secrets for `letsencrypt-prod`.
+
+This will store the account once created by cert-manager.
 ```bash
 $ kubectl create secret generic letsencrypt-prod --namespace=default
 ```
